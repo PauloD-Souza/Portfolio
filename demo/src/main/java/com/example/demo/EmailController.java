@@ -11,7 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @RestController
-@CrossOrigin(origins = "http://127.0.0.1:5501") // Atualize com o endereço correto do seu servidor front-end
+@CrossOrigin(origins = "http://127.0.0.1:5502") // Atualize com o endereço correto do seu servidor front-end
 public class EmailController {
 
     private JavaMailSender javaMailSender;
@@ -35,7 +35,7 @@ public class EmailController {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo(email);
             message.setSubject("Contato do Website");
-            message.setText("Nome: " + nome + "\nEmail: " + email + "\nMensagem: " + mensagem);
+            message.setText("Nome: " + nome + "\nEmail: " + email + "\nMensagem: " + mensagem +"\nContato: Recebemos seu contato, como podemos ajudar ?");
 
             // Configurar o e-mail fixo para onde enviar
             message.setFrom("paulosouzasouzasilva@outlook.com");
